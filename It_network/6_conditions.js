@@ -1,0 +1,1 @@
+document.write("Waiting for edit."); // Simply prints "Hello world from JavaScript!".
