@@ -88,9 +88,11 @@ function menu(){
     switch(choice){
         case 1:{
             calculate_bmi();
+            break;
         }
         case 2:{
             show_date_example();
+            break;
         }
     }
 }
