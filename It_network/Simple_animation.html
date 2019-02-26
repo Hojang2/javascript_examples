@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple JS animation</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+
+            #box1 {
+                height: 50px;
+                width: 50px;
+                background: red;
+                position: absolute;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box1">
+
+        </div>
+
+        <script>
+            let box = document.getElementById("box1");
+            box.style.right = 0;
+            box.style.top = 0
+            let x = 0;
+            let y = 0;
+            let direction = "right";
+
+            let t = setInterval(move, 1.5);
+
+            function move(){
+                
+                if (direction == "right")
+                {
+                    if (x < 1870){
+                        x += 1;
+                        box.style.left = x + "px";
+                    } else {
+                        direction = "down";
+                    }
+                }
+
+                if (direction == "down"){
+                    if (y < 890){
+                        y += 1;
+                        box.style.top = y + "px";
+                    } else {
+                        direction = "left";
+                    }
+                }
+
+                if (direction == "left"){
+                    if (x > 0){
+                        x -= 1;
+                        box.style.left = x + "px";
+                    } else {
+                        direction = "up";
+                    }
+                }
+
+                if (direction == "up"){
+                    if (y > 0){
+                        y -= 1;
+                        box.style.top = y + "px";
+                    } else {
+                        direction = "right";
+                    }
+
+                }
+        
+   
+}
+            
+        </script>
+    </body>
+<html>
