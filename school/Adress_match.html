@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+
+        <head>
+                <meta charset="UTF-8">
+                <title>Event example</title>
+                <script>
+                    function vyhodnot(){
+                        let string = document.forms["myForm"]["address"].value;
+                        if (string == "") {
+                            alert("Name must be filled out");
+                            return false;
+                        }
+                        let  patt = /[a-z]/i;
+                        document.write(patt.test(string));
+                        return patt.test(string);
+                    }
+                    
+                </script>
+        </head>
+
+        <body>
+            <form  name="myForm" method="POST" onsubmit="return vyhodnot();">
+                    address: <input type="text" name="address">
+                    <input type="submit" value="Submit">
+            </form>
+        </body>
+</html>
